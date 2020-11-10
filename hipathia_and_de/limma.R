@@ -103,10 +103,5 @@ names(path_mapper) <- path_to_name$path_id
 path_vals_de$feature_id <- path_mapper[path_vals_de$feature_id]
 
 # write intermediate outputs
-write.table(x = expression_de, file = "expression_de.tsv", sep = "\t", quote = FALSE)
-write.table(x = path_vals_de, file = "path_vals_de.tsv", sep = "\t", quote = FALSE)
-
-
-
-
-
+write.table(x = expression_de, file = "expression_de.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+write.table(x = path_vals_de, file = "path_vals_de.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
