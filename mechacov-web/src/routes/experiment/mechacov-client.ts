@@ -1,6 +1,7 @@
 class MechACovClient {
 
     static async exchange<T>(serviceUrl: string, httpMethod: string, queryParams: any, requestBody: any, abortSignal: AbortSignal): Promise<T> {
+        // TODO: replace with configuration
         const baseUrl = "http://192.168.150.151:8080/";        
         const headers = {
             Accept: 'application/json',
