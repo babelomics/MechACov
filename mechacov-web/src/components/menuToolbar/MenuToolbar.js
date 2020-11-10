@@ -5,9 +5,13 @@ import {
     Toolbar,
     Typography,
     Box,
+    Button,
 } from '@material-ui/core'
 import { styles } from './StyleMenuToolbar'
 // import Sliderbar from '../sliderbar/Sliderbar'
+
+import CloseIcon from '@material-ui/icons/Close';
+import { Link, Route, Switch } from 'react-router-dom';
 
 function MenuToolbar() {
     const classes = styles
@@ -22,7 +26,13 @@ function MenuToolbar() {
                     >
                         MechAcov
                     </Typography>
-
+                    <Box flexGrow={1} />
+                    <Switch>
+                        <Route path="/home"></Route>
+                        <Route>
+                            <Button component={Link} to="/home" color="inherit"><CloseIcon /></Button>
+                        </Route>
+                    </Switch>
                 </Toolbar>
             </AppBar>
         </Grid>
