@@ -4,9 +4,10 @@ import {
     AppBar,
     Toolbar,
     Typography,
+    Box,
 } from '@material-ui/core'
 import { styles } from './StyleMenuToolbar'
-import Sliderbar from '../sliderbar/Sliderbar'
+// import Sliderbar from '../sliderbar/Sliderbar'
 
 function MenuToolbar() {
     const classes = styles
@@ -14,7 +15,7 @@ function MenuToolbar() {
         <Grid container className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <Sliderbar />
+                    {/* <Sliderbar /> */}
                     <Typography
                         className={classes.title}
                         variant='h5'

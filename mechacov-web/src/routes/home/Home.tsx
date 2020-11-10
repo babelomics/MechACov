@@ -1,7 +1,10 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Typography } from '@material-ui/core';
+import HomeIcon from '@material-ui/icons/Home';
 import { makeStyles } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
+import { Link } from 'react-router-dom';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -20,23 +23,23 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const About = (props) => {
+function Home() {
     const classes = useStyles();
     return (
         <Grid container
             direction="column"
             justify="space-evenly"
             alignItems="center">
-            <Grid item xs={12} sm={6}>
-                <br />
-                <Typography variant={'h2'}>Project 34: MechAcov</Typography>
-                <br />
-                <Typography className={classes.typography}>
-                    Development of a tool for mechanistic meta-analyses using COVID-19 available data as proof of concept
-                </Typography>
+            <Grid item xs={12} sm={6}><HomeIcon className={classes.iconHome} /></Grid>
+            <Grid item xs={12} sm={6}><Typography className={classes.typography} variant='h4'>Welcome !</Typography></Grid>
+            <Grid item sm={12}>
+                <Box padding={4}>
+                    <Button component={Link} to="/experiment" variant="contained" color="primary">Run an experiment!</Button>
+                </Box>
             </Grid>
         </Grid>
     );
 }
 
-export default About;
+
+export default Home;

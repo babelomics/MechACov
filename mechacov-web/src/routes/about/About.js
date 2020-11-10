@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import HomeIcon from '@material-ui/icons/Home';
 import { makeStyles } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
+
 
 const useStyles = makeStyles(theme => ({
     typography: {
@@ -20,22 +20,23 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const Home = (props) => {
+function About() {
     const classes = useStyles();
     return (
         <Grid container
             direction="column"
             justify="space-evenly"
             alignItems="center">
-            <Grid item xs={12} sm={6}><HomeIcon className={classes.iconHome} /></Grid>
-            <Grid item xs={12} sm={6}><Typography className={classes.typography} variant='h4'>
-                Welcome !
-            </Typography>
+            <Grid item xs={12} sm={6}>
+                <br />
+                <Typography variant={'h2'}>Project 34: MechAcov</Typography>
+                <br />
+                <Typography className={classes.typography}>
+                    Development of a tool for mechanistic meta-analyses using COVID-19 available data as proof of concept
+                </Typography>
             </Grid>
         </Grid>
-
-
     );
 }
 
-export default Home;
+export default About;
