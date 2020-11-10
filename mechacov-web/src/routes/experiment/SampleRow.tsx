@@ -15,7 +15,7 @@ function Component(props: ComponentProps) {
 
     return (
         <TableRow>
-            <TableCell>{sample._id}</TableCell>
+            <TableCell>{sample.id}</TableCell>
             <TableCell>{sample.studyId}</TableCell>
             <TableCell>{sample.gsmId}</TableCell>
             <TableCell>{sample.columnId}</TableCell>
@@ -23,7 +23,7 @@ function Component(props: ComponentProps) {
             <TableCell>{sample.hpi}</TableCell>
             <TableCell>{sample.moi}</TableCell>
             <TableCell>{sample.strain}</TableCell>
-            <TableCell>{sample.tissueCellType}</TableCell>
+            <TableCell>{sample.tissueCellLine}</TableCell>
             <TableCell>{sample.platform}</TableCell>
             <TableCell>{sample.platformDetails}</TableCell>
         </TableRow>

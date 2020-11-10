@@ -71,7 +71,7 @@ function Component(props: ComponentProps) {
                     {
                         analyses.map((sample: Sample) => {
                             return (
-                                <SampleRow key={sample._id} sample={sample} />
+                                <SampleRow key={sample.id} sample={sample} />
                             );
                         })
                     }

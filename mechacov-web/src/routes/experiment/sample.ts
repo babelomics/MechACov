@@ -1,5 +1,5 @@
 interface Sample {
-    _id: string;
+    id: string;
     studyId: string;
     gsmId: string;
     columnId: string;
@@ -7,7 +7,7 @@ interface Sample {
     hpi: number;
     moi: number;
     strain: string;
-    tissueCellType: string;
+    tissueCellLine: string;
     platform: string;
     platformDetails: string;
 }
