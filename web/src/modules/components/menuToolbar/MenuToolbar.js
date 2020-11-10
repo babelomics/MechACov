@@ -19,7 +19,7 @@ function MenuToolbar() {
                         className={classes.title}
                         variant='h5'
                     >
-                        MechAcov
+                        MechACov
                     </Typography>
 
                 </Toolbar>

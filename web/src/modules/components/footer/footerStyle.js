@@ -11,11 +11,13 @@ export const useStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(2),
     },
     footer: {
-        paddingTop: 4,
+        paddingTop: 12,
+        paddingBottom: 12,
         position: 'absolute',
         bottom: 0,
         width: '100%',
         marginTop: 3,
+        color: "white",
         backgroundColor: '#5c6bc0',
     },
 }));

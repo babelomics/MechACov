@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import ParentSize from '@visx/responsive/lib/components/ParentSize';
 
-import Heatmap from './components/Heatmap';
+import Heatmap from '../src/modules/components/visualizations/Heatmap';
 import './styles.css';
 
 render(

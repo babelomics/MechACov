@@ -9,7 +9,7 @@ const Copyright = () => {
     return (
         <Typography variant="body2">
             {'Copyright © '}
-            <Link color="inherit" href="https://github.com/babelomics" target="_blank">
+            <Link color="inherit" href="http://www.clinbioinfosspa.es/" target="_blank">
                 Developed by CBA
             </Link>{' '}
             {new Date().getFullYear()}
@@ -29,7 +29,7 @@ export default function Footer() {
 
                     variant="body1"
                 >
-                    MechAcov
+                    MechACov
                 </Typography>
                 <Copyright />
             </Container>
