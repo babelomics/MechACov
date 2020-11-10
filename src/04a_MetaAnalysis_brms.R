@@ -1,3 +1,3 @@
-# input: Array of Genes/circuits differentially expressed files (from 03_Expression2DifferentialExpression.R)
-# output: Combined list of genes/circuits differentially expressed file
+# input: Genes/circuits differentially expressed file (from 03_Expression2DifferentialExpression.R)
+# output: Meta-analysis of genes/circuits differentially expressed 
 # output format: id, displayName, Effect/pvalue, [confidentInterval]
