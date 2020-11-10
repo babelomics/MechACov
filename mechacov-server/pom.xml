@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.cbra</groupId>
-	<artifactId>megacov-server</artifactId>
+	<artifactId>mechacov-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MechACov</name>
 	<description>Web services for MechACov</description>
