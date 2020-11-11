@@ -38,11 +38,18 @@ class DataExplorer extends React.Component {
       },
     };
     return (
-      <PlotlyChart data={data}
-        layout={layout}
-        onClick={this.handleClick}
-        onHover={this.handleHover}
-      />
+
+
+      <div>
+
+        <PlotlyChart data={data}
+          layout={layout}
+          onClick={this.handleClick}
+          // onHover={this.handleHover}
+        />
+
+
+      </div>
     );
   }
 }
