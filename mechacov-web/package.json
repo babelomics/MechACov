@@ -17,6 +17,7 @@
     "@visx/heatmap": "^1.0.0",
     "@visx/mock-data": "^1.0.0",
     "@visx/scale": "^1.1.0",
+    "abort-controller": "^3.0.0",
     "install": "^0.13.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

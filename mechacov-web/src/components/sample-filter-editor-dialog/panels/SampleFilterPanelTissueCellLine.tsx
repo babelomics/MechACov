@@ -2,7 +2,7 @@ import { Box, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel } fr
 import React from 'react';
 import MechACovClient from '../../../clients/MechacovClient';
 import SampleFilter from '../../../models/SampleFilter';
-
+import AbortController from "abort-controller"
 
 
 interface ComponentProps {

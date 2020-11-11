@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import { TableRow, TableCell, LinearProgress } from '@material-ui/core';
 import { Waypoint } from 'react-waypoint';
+import AbortController from "abort-controller"
 
 
 // TODO: define a criteria for these params and compute them
