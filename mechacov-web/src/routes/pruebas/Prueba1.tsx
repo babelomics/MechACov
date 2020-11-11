@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Grid } from '@material-ui/core';
 import HistogramBar from '../visualizations/HistogramBar';
-import Heatmap from '../../components/Heatmap';
+import Heatmap from '../visualizations/Heatmap';
 
 
 function Prueba1() {
