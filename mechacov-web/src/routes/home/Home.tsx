@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
     box: {
         padding: 0,
-        height: "80vh",
+        // height: "80vh",
         margin: 'auto',
     },
 }));

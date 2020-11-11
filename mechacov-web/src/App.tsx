@@ -10,11 +10,11 @@ import Routes from './Routes';
 
 function App() {
   return (
-    <Router >
+    <Router>
+      <div className="content">
         <MenuToolbar />
-        <div className="Site">
         <Routes />
-      </div>
+    </div>
       <Footer />
     </Router>
   );
