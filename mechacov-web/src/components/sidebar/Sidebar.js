@@ -87,12 +87,21 @@ export default function Sliderbar() {
                         <ListItemText>Experiment</ListItemText>
                     </ListItem>
                 </Link>
-                <Link to="/explorer" className={classes.link}>
+
+                <Link to="/prueba1" className={classes.link}>
                     <ListItem button >
                         <ListItemIcon><ExploreIcon /></ListItemIcon>
-                        <ListItemText>Explorer</ListItemText>
+                        <ListItemText>visx test</ListItemText>
                     </ListItem>
                 </Link>
+
+                <Link to="/prueba2" className={classes.link}>
+                    <ListItem button >
+                        <ListItemIcon><ExploreIcon /></ListItemIcon>
+                        <ListItemText>data-ui test</ListItemText>
+                    </ListItem>
+                </Link>
+
 
                 <Link to="/about" className={classes.link}>
                     <ListItem button >

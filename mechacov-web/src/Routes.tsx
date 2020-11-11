@@ -4,7 +4,9 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './routes/home/Home';
 import About from './routes/about/About';
 import ExperimentRoute from './routes/experiment/Experiment';
-import DataExplorer from './routes/visualizations/DataExplorer';
+
+import Prueba1 from './routes/pruebas/Prueba1';
+import Prueba2 from './routes/pruebas/Prueba2';
 
 
 function Routes() {
@@ -19,8 +21,11 @@ function Routes() {
             <Route path="/experiment">
                 <ExperimentRoute />
             </Route>
-            <Route path="/explorer">
-                <DataExplorer />
+            <Route path="/prueba1">
+                <Prueba1 />
+            </Route>
+            <Route path="/prueba2">
+                <Prueba2 />
             </Route>
             <Route path="/" exact>
                 <Redirect to="/home" />
