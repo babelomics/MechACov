@@ -5,8 +5,9 @@ import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/c
 import LazyList from '../../components/common/LazyList';
 import SampleRow from './SampleRow';
 
-import MechACovClient from './mechacov-client';
+import MechACovClient from '../../clients/MechacovClient';
 import Sample from '../../models/Sample';
+import SampleFilter from '../../models/SampleFilter';
 
 
 
@@ -34,7 +35,21 @@ function Wrapper(props: WrapperProps) {
 
 
 interface ComponentProps {
-    searchFilter: any;
+    searchFilter: SampleFilter;
+}
+
+
+function isSampleFilterEmpty(sampleFilter: SampleFilter) {
+    return undefined === sampleFilter.studyIds
+        && undefined === sampleFilter.groups
+        && undefined === sampleFilter.strains
+        && undefined === sampleFilter.tissueCellTypes
+        && undefined === sampleFilter.platforms
+        && undefined === sampleFilter.platformDetails
+        && undefined === sampleFilter.minHpi
+        && undefined === sampleFilter.maxHpi
+        && undefined === sampleFilter.minMoi
+        && undefined === sampleFilter.maxMoi;
 }
 
 
@@ -45,7 +60,12 @@ function Component(props: ComponentProps) {
     const [errorMsg, setErrorMsg] = useState("");
 
     function fetchPage(page: number, pageSize: number, abortSignal: AbortSignal): Promise<Sample[]> {
-        const url = `samplePages/${pageSize}/${page}`;
+        const queryParams = [];
+        for (const studyId of (searchFilter.studyIds || [])) {
+            queryParams.push(`studyId=${studyId}`);
+        }
+        const queryParamStr = 0 === queryParams.length ? "" : `?${queryParams.join("&")}`;
+        const url = `samplePages/${pageSize}/${page}${queryParamStr}`;
         return MechACovClient.get<Sample[]>(url, {}, abortSignal);
     }
 

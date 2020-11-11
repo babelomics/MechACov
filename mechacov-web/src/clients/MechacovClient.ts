@@ -1,8 +1,10 @@
+import Configuration from '../config';
+
 class MechACovClient {
 
     static async exchange<T>(serviceUrl: string, httpMethod: string, queryParams: any, requestBody: any, abortSignal: AbortSignal): Promise<T> {
         // TODO: replace with configuration
-        const baseUrl = "http://192.168.150.151:8080/";        
+        const baseUrl = Configuration.mechacovServerBaseUrl;
         const headers = {
             Accept: 'application/json',
             'Content-Type': 'application/json',
