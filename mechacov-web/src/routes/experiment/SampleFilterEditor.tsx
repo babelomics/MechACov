@@ -1,9 +1,10 @@
-import { Box } from '@material-ui/core';
+import { Box, Tooltip } from '@material-ui/core';
 import React, { useState } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton } from '@material-ui/core';
 
 import SampleFilterView from './SampleFilterView';
+import SampleFilterEditorDialog from './SampleFilterEditorDialog';
 import SampleFilter from '../../models/SampleFilter';
 
 
@@ -17,8 +18,14 @@ interface ComponentProps {
 function Component(props: ComponentProps) {
 
     const { sampleFilter, setSampleFilter } = props;
+    const [ editorOpen, setEditorOpen ] = useState(false);
 
-    const handleEditorClick = () => {        
+    const handleCloseEditor = () => {
+        setEditorOpen(false);
+    };
+
+    const handleEditorClick = () => {
+        setEditorOpen(true);
     };
 
 
@@ -28,10 +35,13 @@ function Component(props: ComponentProps) {
                 <SampleFilterView sampleFilter={sampleFilter} setSampleFilter={setSampleFilter} />
             </Box>
             <Box flexGrow={0} padding={4}>
-                <IconButton onClick={handleEditorClick}>
-                    <MenuIcon />
-                </IconButton>                
+                <Tooltip title="Edit filter">
+                    <IconButton onClick={handleEditorClick}>
+                        <MenuIcon />
+                    </IconButton>
+                </Tooltip>
             </Box>
+            <SampleFilterEditorDialog open={editorOpen} onClose={handleCloseEditor} sampleFilter={sampleFilter} setSampleFilter={setSampleFilter} />
         </Box>
 
     );
