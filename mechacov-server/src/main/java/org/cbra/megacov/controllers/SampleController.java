@@ -68,38 +68,7 @@ public class SampleController {
             @RequestParam(name = "minMoi", required = false) Integer minMoi,
             @RequestParam(name = "maxMoi", required = false) Integer maxMoi
     ) {
-        var filter = new SampleFilter();
-
-        if (CollectionUtils.isNotEmpty(studyIds)) {
-            filter.getStudyIds().addAll(studyIds);
-        }
-        if (CollectionUtils.isNotEmpty(groups)) {
-            filter.getGroups().addAll(groups);
-        }
-        if (CollectionUtils.isNotEmpty(strains)) {
-            filter.getStraints().addAll(strains);
-        }
-        if (CollectionUtils.isNotEmpty(tissueCellTypes)) {
-            filter.getTissueCellTypes().addAll(tissueCellTypes);
-        }
-        if (CollectionUtils.isNotEmpty(platforms)) {
-            filter.getPlatforms().addAll(platforms);
-        }
-        if (CollectionUtils.isNotEmpty(platformDetails)) {
-            filter.getPlatformDetails().addAll(platformDetails);
-        }
-        if (null != minHpi) {
-            filter.setMinHpi(minHpi);
-        }
-        if (null != maxHpi) {
-            filter.setMaxHpi(maxHpi);
-        }
-        if (null != minMoi) {
-            filter.setMinMoi(minMoi);
-        }
-        if (null != maxMoi) {
-            filter.setMaxMoi(maxMoi);
-        }
+        var filter = buildSampleFilter((studyIds, groups, strains, tissueCellTypes, platforms, platformDetails, minHpi, maxHpi, minMoi, maxMoi);
         return sampleRepository.countFilter(filter);
     }
 
@@ -118,6 +87,22 @@ public class SampleController {
             @RequestParam(name = "minMoi", required = false) Integer minMoi,
             @RequestParam(name = "maxMoi", required = false) Integer maxMoi
     ) {
+        var filter = buildSampleFilter((studyIds, groups, strains, tissueCellTypes, platforms, platformDetails, minHpi, maxHpi, minMoi, maxMoi);
+        return sampleRepository.findByFilter(filter, PageRequest.of(page, pageSize));
+    }
+
+    private static SampleFilter buildSampleFilter(
+            List<String> studyIds,
+            List<String> groups,
+            List<String> strains,
+            List<String> tissueCellTypes,
+            List<String> platforms,
+            List<String> platformDetails,
+            Integer minHpi,
+            Integer maxHpi,
+            Integer minMoi,
+            Integer maxMoi
+    ) {
         var filter = new SampleFilter();
 
         if (CollectionUtils.isNotEmpty(studyIds)) {
@@ -127,7 +112,7 @@ public class SampleController {
             filter.getGroups().addAll(groups);
         }
         if (CollectionUtils.isNotEmpty(strains)) {
-            filter.getStraints().addAll(strains);
+            filter.getStrains().addAll(strains);
         }
         if (CollectionUtils.isNotEmpty(tissueCellTypes)) {
             filter.getTissueCellTypes().addAll(tissueCellTypes);
@@ -150,6 +135,7 @@ public class SampleController {
         if (null != maxMoi) {
             filter.setMaxMoi(maxMoi);
         }
-        return sampleRepository.findByFilter(filter, PageRequest.of(page, pageSize));
+
+        return filter;
     }
 }

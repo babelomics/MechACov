@@ -6,7 +6,7 @@ import LazyList from '../../components/common/LazyList';
 import SampleRow from './SampleRow';
 
 import MechACovClient from './mechacov-client';
-import Sample from './sample';
+import Sample from '../../models/Sample';
 
 
 

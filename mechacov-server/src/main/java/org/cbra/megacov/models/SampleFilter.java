@@ -10,7 +10,7 @@ import java.util.Optional;
 public class SampleFilter {
     private final List<String> studyIds = new ArrayList<>();
     private final List<String> groups = new ArrayList<>();
-    private final List<String> straints = new ArrayList<>();
+    private final List<String> strains = new ArrayList<>();
     private final List<String> tissueCellTypes = new ArrayList<>();
     private final List<String> platforms = new ArrayList<>();
     private final List<String> platformDetails = new ArrayList<>();
@@ -39,7 +39,7 @@ public class SampleFilter {
     public boolean isEmpty() {
         return studyIds.isEmpty()
                 && groups.isEmpty()
-                && straints.isEmpty()
+                && strains.isEmpty()
                 && tissueCellTypes.isEmpty()
                 && platforms.isEmpty()
                 && platformDetails.isEmpty()
