@@ -4,9 +4,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton } from '@material-ui/core';
 
 import SampleFilterView from './SampleFilterView';
-import SampleFilterEditorDialog from './SampleFilterEditorDialog';
+import SampleFilterEditorDialog from '../../components/sample-filter-editor-dialog/SampleFilterEditorDialog';
 import SampleFilter from '../../models/SampleFilter';
-
 
 
 interface ComponentProps {
