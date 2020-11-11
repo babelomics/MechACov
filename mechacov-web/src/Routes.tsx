@@ -12,7 +12,7 @@ function Routes() {
             <Route path="/home">
                 <Home />
             </Route>
-            <Route path="/about">ç
+            <Route path="/about">
                 <About />
             </Route>
             <Route path="/experiment">

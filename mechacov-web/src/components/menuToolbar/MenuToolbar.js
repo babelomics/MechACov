@@ -24,7 +24,7 @@ function MenuToolbar() {
                         className={classes.title}
                         variant='h5'
                     >
-                        MechAcov
+                        MechACov
                     </Typography>
                     <Box flexGrow={1} />
                     <Switch>
