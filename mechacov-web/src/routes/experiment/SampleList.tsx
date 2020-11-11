@@ -43,7 +43,7 @@ function isSampleFilterEmpty(sampleFilter: SampleFilter) {
     return undefined === sampleFilter.studyIds
         && undefined === sampleFilter.groups
         && undefined === sampleFilter.strains
-        && undefined === sampleFilter.tissueCellTypes
+        && undefined === sampleFilter.tissueCellLines
         && undefined === sampleFilter.platforms
         && undefined === sampleFilter.platformDetails
         && undefined === sampleFilter.minHpi
@@ -63,6 +63,9 @@ function Component(props: ComponentProps) {
         const queryParams = [];
         for (const studyId of (searchFilter.studyIds || [])) {
             queryParams.push(`studyId=${studyId}`);
+        }
+        for (const cellLine of (searchFilter.tissueCellLines || [])) {
+            queryParams.push(`tissueCellLine=${cellLine}`);
         }
         const queryParamStr = 0 === queryParams.length ? "" : `?${queryParams.join("&")}`;
         const url = `samplePages/${pageSize}/${page}${queryParamStr}`;

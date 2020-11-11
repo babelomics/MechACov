@@ -11,7 +11,7 @@ public class SampleFilter {
     private final List<String> studyIds = new ArrayList<>();
     private final List<String> groups = new ArrayList<>();
     private final List<String> strains = new ArrayList<>();
-    private final List<String> tissueCellTypes = new ArrayList<>();
+    private final List<String> tissueCellLines = new ArrayList<>();
     private final List<String> platforms = new ArrayList<>();
     private final List<String> platformDetails = new ArrayList<>();
 
@@ -40,7 +40,7 @@ public class SampleFilter {
         return studyIds.isEmpty()
                 && groups.isEmpty()
                 && strains.isEmpty()
-                && tissueCellTypes.isEmpty()
+                && tissueCellLines.isEmpty()
                 && platforms.isEmpty()
                 && platformDetails.isEmpty()
                 && minHpi.isEmpty()

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Tab, Tabs, Tooltip } from '@material-ui/core';
 import SampleFilter from '../../models/SampleFilter';
 import SampleFilterPanelStudy from './panels/SampleFilterPanelStudy';
-import { triggerAsyncId } from 'async_hooks';
+import SampleFilterPanelTissueCellLine from './panels/SampleFilterPanelTissueCellLine';
+
 
 
 interface ComponentProps {
@@ -55,7 +56,7 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
                                 <Tab label="Studies" value="study" />
                                 <Tab label="Group" value="group" />
                                 <Tab label="Strain" value="strain" />
-                                <Tab label="Tissue cell type" value="tissue-cell-type" />
+                                <Tab label="Tissue cell type" value="tissue-cell-line" />
                                 <Tab label="Platform" value="platform" />
                                 <Tab label="HPI" value="hpi" />
                                 <Tab label="MOI" value="moi" />
@@ -66,6 +67,7 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
                         </Box>
                         <Box flexGrow={1}>
                             {"study" === activeTab && <SampleFilterPanelStudy sampleFilter={sampleFilter} setSampleFilter={this.setSampleFilter} />}
+                            {"tissue-cell-line" === activeTab && <SampleFilterPanelTissueCellLine sampleFilter={sampleFilter} setSampleFilter={this.setSampleFilter} />}
                         </Box>
                     </Box>
                 </DialogContent>

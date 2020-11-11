@@ -24,6 +24,12 @@ public class MongoSampleRepository implements SampleRepository {
     private MongoTemplate mongoTemplate;
 
     @Override
+    public Collection<String> findAllStudies() {
+        var query = Query.query(new Criteria());
+        return mongoTemplate.findDistinct(query, "studyId", COLLECTION_NAME, String.class);
+    }
+
+    @Override
     public Collection<String> findAllGroups() {
         var query = Query.query(new Criteria());
         return mongoTemplate.findDistinct(query, "group", COLLECTION_NAME, String.class);
@@ -36,9 +42,9 @@ public class MongoSampleRepository implements SampleRepository {
     }
 
     @Override
-    public Collection<String> findAllTissueCellTypes() {
+    public Collection<String> findAllTissueCellLines() {
         var query = Query.query(new Criteria());
-        return mongoTemplate.findDistinct(query, "tissueCellType", COLLECTION_NAME, String.class);
+        return mongoTemplate.findDistinct(query, "tissueCellLine", COLLECTION_NAME, String.class);
     }
 
     @Override
@@ -88,8 +94,8 @@ public class MongoSampleRepository implements SampleRepository {
             var criteria = Criteria.where("strain").in(filter.getStrains());
             criterias.add(criteria);
         }
-        if (!filter.getTissueCellTypes().isEmpty()) {
-            var criteria = Criteria.where("tissueCellType").in(filter.getTissueCellTypes());
+        if (!filter.getTissueCellLines().isEmpty()) {
+            var criteria = Criteria.where("tissueCellLine").in(filter.getTissueCellLines());
             criterias.add(criteria);
         }
         if (!filter.getPlatforms().isEmpty()) {
@@ -125,6 +131,4 @@ public class MongoSampleRepository implements SampleRepository {
     public <T extends Sample> T save(T sample) {
         return mongoTemplate.save(sample, COLLECTION_NAME);
     }
-
-
 }

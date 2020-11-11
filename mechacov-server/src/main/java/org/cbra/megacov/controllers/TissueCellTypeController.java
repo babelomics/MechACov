@@ -17,8 +17,8 @@ public class TissueCellTypeController {
     @Autowired
     private SampleRepository sampleRepository;
 
-    @GetMapping("/tissueCellTypes")
-    public Collection<String> getAllSampleTissueCellTypes() throws IOException {
-        return sampleRepository.findAllTissueCellTypes();
+    @GetMapping("/tissueCellLines")
+    public Collection<String> getAllSampleTissueCellLines() throws IOException {
+        return sampleRepository.findAllTissueCellLines();
     }
 }

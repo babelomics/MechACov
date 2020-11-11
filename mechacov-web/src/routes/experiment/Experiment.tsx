@@ -10,7 +10,7 @@ const defaultSampleFilter: SampleFilter = {
     studyIds: undefined,
     groups: undefined,
     strains: undefined,
-    tissueCellTypes: undefined,
+    tissueCellLines: undefined,
     platforms: undefined,
     platformDetails: undefined,
     minHpi: undefined,
