@@ -84,8 +84,8 @@ public class MongoSampleRepository implements SampleRepository {
             var criteria = Criteria.where("group").in(filter.getGroups());
             criterias.add(criteria);
         }
-        if (!filter.getStraints().isEmpty()) {
-            var criteria = Criteria.where("strain").in(filter.getStraints());
+        if (!filter.getStrains().isEmpty()) {
+            var criteria = Criteria.where("strain").in(filter.getStrains());
             criterias.add(criteria);
         }
         if (!filter.getTissueCellTypes().isEmpty()) {

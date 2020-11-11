@@ -2,7 +2,7 @@
 import React from 'react';
 import { TableCell, TableRow } from '@material-ui/core';
 
-import Sample from './sample';
+import Sample from '../../models/Sample';
 
 
 interface ComponentProps {
