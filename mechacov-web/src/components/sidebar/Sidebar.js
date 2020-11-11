@@ -87,6 +87,12 @@ export default function Sliderbar() {
                         <ListItemText>Experiment</ListItemText>
                     </ListItem>
                 </Link>
+                <Link to="/explorer" className={classes.link}>
+                    <ListItem button >
+                        <ListItemIcon><ExploreIcon /></ListItemIcon>
+                        <ListItemText>Explorer</ListItemText>
+                    </ListItem>
+                </Link>
 
                 <Link to="/about" className={classes.link}>
                     <ListItem button >
