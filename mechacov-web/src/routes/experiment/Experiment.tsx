@@ -1,11 +1,14 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
 
+import ExperimentCreator from './ExperimentCreator';
+import SelectionView from './SelectionView';
 import SampleList from './SampleList';
 import SampleListCounter from './SampleListCounter';
 import SampleFilterEditor from './SampleFilterEditor';
 import SampleFilter from '../../models/SampleFilter';
 import Sample from '../../models/Sample';
+import Experiment from '../../models/Experiment';
 
 
 
@@ -35,6 +38,7 @@ interface ComponentState {
     cases: Sample[];
     controlIds: Set<string>;
     caseIds: Set<string>;
+    experiment: Experiment | undefined;
 }
 
 
@@ -47,16 +51,29 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
         cases: [],
         controlIds: new Set<string>(),
         caseIds: new Set<string>(),
+        experiment: undefined,
     };
 
     componentDidMount() {
-        this.setState({ sampleFilter: defaultSampleFilter, controls: [], cases: [], controlIds: new Set<string>(), caseIds: new Set<string>() });
+        this.setState({ sampleFilter: defaultSampleFilter, controls: [], cases: [], controlIds: new Set<string>(), caseIds: new Set<string>(), experiment: undefined });
     }
 
     render() {
-        const { sampleFilter, caseIds, controlIds } = this.state;
+        const { sampleFilter, cases, controls, caseIds, controlIds, experiment } = this.state;
+        const valid = 0 < controls.length && 0 < cases.length;
         return (
             <div>
+                {
+                    !!experiment && <ExperimentCreator experiment={experiment} />
+                }
+                <Box padding={4} display="flex">
+                    <Box flexGrow={1}>
+                        <SelectionView controls={controls} cases={cases} />
+                    </Box>
+                    <Box flexGrow={0}>
+                        <Button variant="contained" color="primary" disabled={!valid} onClick={this.handleExperimentRun}>Run experiment!</Button>
+                    </Box>
+                </Box>
                 <Box padding={4}>
                     <SampleFilterEditor sampleFilter={sampleFilter} setSampleFilter={this.setSampleFilter} />
                 </Box>
@@ -110,6 +127,19 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
             const newCaseIds = new Set<string>(newCases.map(x => x.id));
             this.setState({ cases: newCases, caseIds: newCaseIds });
         }
+    }
+
+    private readonly handleExperimentRun = () => {
+        const { sampleFilter, cases, controls, caseIds, controlIds } = this.state;
+        const valid = 0 < controls.length && 0 < cases.length;
+        if (!valid) {
+            return;
+        }
+        const experiment: Experiment = {
+            controls: Array.from(controlIds),
+            cases: Array.from(caseIds),
+        };
+        this.setState({ experiment: experiment });
     }
 }
 
