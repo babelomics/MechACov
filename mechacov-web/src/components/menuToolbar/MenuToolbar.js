@@ -8,7 +8,7 @@ import {
     Button,
 } from '@material-ui/core'
 import { styles } from './StyleMenuToolbar'
-// import Sliderbar from '../sliderbar/Sliderbar'
+import Sliderbar from '../sidebar/Sidebar'
 
 import CloseIcon from '@material-ui/icons/Close';
 import { Link, Route, Switch } from 'react-router-dom';
@@ -19,12 +19,12 @@ function MenuToolbar() {
         <Grid container className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    {/* <Sliderbar /> */}
+                    <Sliderbar />
                     <Typography
                         className={classes.title}
                         variant='h5'
                     >
-                        MechAcov
+                        MechACov
                     </Typography>
                     <Box flexGrow={1} />
                     <Switch>
