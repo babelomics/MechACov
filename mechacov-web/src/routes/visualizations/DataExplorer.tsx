@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PlotlyChart from 'react-plotlyjs-ts';
+// import PlotlyChart from 'react-plotlyjs-ts';
 
 class DataExplorer extends React.Component {
   public handleClick = (evt: any) => alert('click')
@@ -38,11 +38,12 @@ class DataExplorer extends React.Component {
       },
     };
     return (
-      <PlotlyChart data={data}
-        layout={layout}
-        onClick={this.handleClick}
-        onHover={this.handleHover}
-      />
+      <></>
+      // <PlotlyChart data={data}
+      //   layout={layout}
+      //   onClick={this.handleClick}
+      //   onHover={this.handleHover}
+      // />
     );
   }
 }

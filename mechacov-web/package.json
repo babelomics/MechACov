@@ -6,10 +6,10 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.2",
-    "@testing-library/user-event": "^12.2.2",
+    "@testing-library/react": "^11.1.1",
+    "@testing-library/user-event": "^12.2.0",
     "@types/jest": "^26.0.15",
-    "@types/node": "^14.14.7",
+    "@types/node": "^12.19.4",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.6",
@@ -18,15 +18,13 @@
     "@visx/mock-data": "^1.0.0",
     "@visx/scale": "^1.1.0",
     "install": "^0.13.0",
-    "plotly.js": "^1.57.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-plotlyjs-ts": "^2.2.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-waypoint": "^9.0.3",
     "typeface-roboto": "^1.1.13",
-    "typescript": "^4.0.5",
+    "typescript": "^3.9.7",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -52,8 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/plotly.js": "^1.54.2"
   }
 }
