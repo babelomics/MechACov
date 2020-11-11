@@ -6,9 +6,11 @@ import {
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
-
-import { routesPublic } from '../../layout/routes'
 import { Link } from 'react-router-dom'
+
+import HomeIcon from '@material-ui/icons/HomeTwoTone';
+import ExploreIcon from '@material-ui/icons/BarChartTwoTone';
+import AboutIcon from '@material-ui/icons/InfoTwoTone';
 
 
 const useStyles = makeStyles(theme => ({
@@ -35,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+
 export default function Sliderbar() {
 
     const classes = useStyles();
@@ -53,33 +56,48 @@ export default function Sliderbar() {
     };
 
     const sideList = side => (
-
         <div
             className={classes.list}
             role="presentation"
             onClick={toggleDrawer(side, false)}
             onKeyDown={toggleDrawer(side, false)}
         >
+
             <List>
                 <ListItem>
                     <ListItemText className={classes.title}>
-                        <Typography className={classes.title}>
+                        <Typography className={classes.title} variant='h5'>
                             MechAcov
             </Typography>
                     </ListItemText>
                 </ListItem>
+
                 <Divider />
-                {routesPublic.map((elem, index) => (
-                    <Link to={elem.path} className={classes.link} key={index}>
-                        <ListItem button>
-                            <ListItemIcon>{elem.icon}</ListItemIcon>
-                            <ListItemText>
-                                {elem.name}
-                            </ListItemText>
-                        </ListItem></Link>
-                ))}
+
+                <Link to="/home" className={classes.link}>
+                    <ListItem button >
+                        <ListItemIcon><HomeIcon /></ListItemIcon>
+                        <ListItemText>Home</ListItemText>
+                    </ListItem>
+                </Link>
+
+                <Link to="/experiment" className={classes.link}>
+                    <ListItem button >
+                        <ListItemIcon><ExploreIcon /></ListItemIcon>
+                        <ListItemText>Experiment</ListItemText>
+                    </ListItem>
+                </Link>
+
+                <Link to="/about" className={classes.link}>
+                    <ListItem button >
+                        <ListItemIcon><AboutIcon /></ListItemIcon>
+                        <ListItemText>About</ListItemText>
+                    </ListItem>
+                </Link>
             </List>
+
             <Divider />
+
         </div>
     );
 
