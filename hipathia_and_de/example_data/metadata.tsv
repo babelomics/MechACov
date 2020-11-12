@@ -1,0 +1,202 @@
+study_id	column_id	group	hpi	moi	strain	tissue_cell_line	platform	platform_details
+GSE33267	GSM823177	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823178	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823179	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823180	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823181	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823182	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823183	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823184	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823185	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823186	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823187	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823188	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823189	mock	24	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823190	mock	24	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823191	mock	24	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823192	mock	30	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823193	mock	30	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823194	mock	30	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823195	mock	36	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823196	mock	36	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823197	mock	36	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823198	mock	48	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823199	mock	48	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823200	mock	48	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823201	mock	54	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823202	mock	54	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823203	mock	54	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823204	mock	60	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823205	mock	60	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823206	mock	60	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823207	mock	72	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823208	mock	72	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823209	mock	72	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823210	infected	0	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823211	infected	0	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823212	infected	0	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823213	infected	3	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823214	infected	3	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823215	infected	3	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823216	infected	7	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823217	infected	7	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823218	infected	7	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823219	infected	12	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823220	infected	12	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823221	infected	12	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823222	infected	24	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823223	infected	24	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823224	infected	24	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823225	infected	30	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823226	infected	30	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823227	infected	30	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823228	infected	36	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823229	infected	36	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823230	infected	36	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823231	infected	48	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823232	infected	48	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823233	infected	48	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823234	infected	54	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823235	infected	54	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823236	infected	54	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823237	infected	60	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823238	infected	60	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823239	infected	60	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823240	infected	72	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823241	infected	72	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE33267	GSM823242	infected	72	5	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Feature Number version)
+GSE45042	GSM1096511	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096512	infected	0	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096513	infected	24	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096514	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096515	infected	0	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096516	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096517	infected	3	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096518	infected	7	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096519	infected	24	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096520	mock	24	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096521	infected	3	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096522	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096523	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096524	mock	24	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096525	mock	24	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096526	infected	12	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096527	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096528	infected	24	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096529	infected	12	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096530	infected	0	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096531	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096532	infected	18	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096533	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096534	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096535	infected	7	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096536	infected	18	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096537	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096538	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096539	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096540	infected	18	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096541	infected	7	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE45042	GSM1096542	infected	3	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-014850 Whole Human Genome Microarray 4x44K G4112F (Probe Name version)
+GSE56677	GSM1366711	infected	0	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366712	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366713	infected	3	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366714	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366715	infected	18	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366716	infected	7	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366717	infected	0	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366718	infected	7	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366719	infected	12	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366720	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366721	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366722	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366723	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366724	infected	18	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366725	infected	3	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366726	infected	18	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366727	infected	12	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366728	infected	24	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366729	infected	0	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366730	mock	18	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366731	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366732	mock	7	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366733	mock	18	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366734	infected	24	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366735	mock	3	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366736	infected	3	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366737	infected	24	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366738	mock	12	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366739	mock	18	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366740	infected	12	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366741	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366742	infected	7	5	MERS-CoV (EMC/2012)	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE56677	GSM1366743	mock	0	0	mock	Calu3 2B4 	microarray	Agilent-039494 SurePrint G3 Human GE v2 8x60K Microarray 039381 (Probe Name version)
+GSE17400	GSM432030	mock	12	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432031	mock	12	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432032	mock	12	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432033	mock	24	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432034	mock	24	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432209	mock	24	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432210	mock	48	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432211	mock	48	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432212	mock	48	0	mock	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432213	infected	12	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432241	infected	12	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432331	infected	12	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432332	infected	24	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432333	infected	24	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432360	infected	24	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432361	infected	48	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432393	infected	48	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE17400	GSM432394	infected	48	0.1	SARS-CoV (Urbani Strain)	Calu3 2B4 	microarray	[HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+GSE122876	SRR8239989	mock	24	0	mock	Calu-3	RNA-Seq	BGISEQ-500
+GSE122876	SRR8239990	mock	24	0	mock	Calu-3	RNA-Seq	BGISEQ-500
+GSE122876	SRR8239991	mock	24	0	mock	Calu-3	RNA-Seq	BGISEQ-500
+GSE122876	SRR8239992	infected	24	2	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	BGISEQ-500
+GSE122876	SRR8239993	infected	24	2	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	BGISEQ-500
+GSE122876	SRR8239994	infected	24	2	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	BGISEQ-500
+GSE139516	SRR10357366	mock	24	0	mock	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357367	mock	24	0	mock	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357368	mock	24	0	mock	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357369	infected	6	4	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357370	infected	6	4	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357371	infected	6	4	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357372	infected	24	4	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357373	infected	24	4	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	Hiseq X Ten
+GSE139516	SRR10357374	infected	24	4	MERS-CoV (EMC/2012)	Calu-3	RNA-Seq	Hiseq X Ten
+GSE147507	GSM4432378	mock	24	0	mock	NHBE	RNA-Seq	NextSeq 500
+GSE147507	GSM4432379	mock	24	0	mock	NHBE	RNA-Seq	NextSeq 500
+GSE147507	GSM4432380	mock	24	0	mock	NHBE	RNA-Seq	NextSeq 500
+GSE147507	GSM4432381	infected	24	2	SARS-CoV-2 (USA-WA1/2020)	NHBE	RNA-Seq	NextSeq 500
+GSE147507	GSM4432382	infected	24	2	SARS-CoV-2 (USA-WA1/2020)	NHBE	RNA-Seq	NextSeq 500
+GSE147507	GSM4432383	infected	24	2	SARS-CoV-2 (USA-WA1/2020)	NHBE	RNA-Seq	NextSeq 500
+GSE147507	GSM4432384	mock	24	0	mock	A549	RNA-Seq	NextSeq 500
+GSE147507	GSM4432385	mock	24	0	mock	A549	RNA-Seq	NextSeq 500
+GSE147507	GSM4432386	mock	24	0	mock	A549	RNA-Seq	NextSeq 500
+GSE147507	GSM4432387	infected	24	0.2	SARS-CoV-2 (USA-WA1/2020)	A549	RNA-Seq	NextSeq 500
+GSE147507	GSM4432388	infected	24	0.2	SARS-CoV-2 (USA-WA1/2020)	A549	RNA-Seq	NextSeq 500
+GSE147507	GSM4432389	infected	24	0.2	SARS-CoV-2 (USA-WA1/2020)	A549	RNA-Seq	NextSeq 500
+GSE56192	SAMN02689047	infected	24	3	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689051	infected	24	3	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689052	infected	48	3	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689053	infected	48	3	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689055	infected	48	3	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689056	infected	24	0.1	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689135	infected	24	0.1	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689136	infected	24	0.1	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689137	infected	48	0.1	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689138	infected	48	0.1	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689139	infected	24	3	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689142	infected	48	0.1	MERS-CoV (EMC/2012)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689146	mock	24	0	mock	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689147	mock	24	0	mock	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689148	mock	24	0	mock	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689157	infected	24	3	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689158	infected	24	3	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689161	infected	24	3	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689162	infected	48	3	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689163	infected	48	3	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689191	infected	24	0.1	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689265	infected	24	0.1	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689319	infected	24	0.1	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689416	infected	48	0.1	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
+GSE56192	SAMN02689489	infected	48	0.1	SARS-CoV (Urbani Strain)	MRC5	RNA-Seq	Illumina 2000/2500
