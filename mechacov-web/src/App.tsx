@@ -2,11 +2,12 @@ import React from 'react';
 import 'typeface-roboto';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import MenuToolbar from './components/menuToolbar/MenuToolbar'
-import Footer from './components/footer/Footer'
+import MenuToolbar from './components/menuToolbar/MenuToolbar';
+import Footer from './components/footer/Footer';
 
 //Routes
 import Routes from './Routes';
+import { Box } from '@material-ui/core';
 
 function App() {
   return (
@@ -14,10 +15,10 @@ function App() {
       <div className="content">
         <MenuToolbar />
         <Routes />
-    </div>
+      </div>
       <Footer />
     </Router>
   );
-} 
+}
 
 export default App;

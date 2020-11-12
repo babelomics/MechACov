@@ -84,21 +84,11 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
 
     private readonly countResults = async () => {
         const { searchFilter } = this.props;
-        const queryParams = [];
-        for (const studyId of (searchFilter.studyIds || [])) {
-            queryParams.push(`studyId=${studyId}`);
-        }
-        for (const cellLine of (searchFilter.tissueCellLines || [])) {
-            queryParams.push(`tissueCellLine=${cellLine}`);
-        }
-        const queryParamStr = 0 === queryParams.length ? "" : `?${queryParams.join("&")}`;
-        const url = `samples/count${queryParamStr}`;
-
         this.abortController.abort();
         this.abortController = new AbortController();
         this.setState({ count: -1, loading: true, error: false });
         try {
-            const count = await MechACovClient.get<number>(url, {}, this.abortController.signal);
+            const count = await MechACovClient.countSamples(searchFilter, this.abortController.signal);
             this.setState({ count: count, loading: false });
         } catch (error) {
             if ("AbortError" !== error.name) {

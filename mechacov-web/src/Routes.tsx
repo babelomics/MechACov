@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Home from './routes/home/Home';
 import About from './routes/about/About';
-import ExperimentRoute from './routes/experiment/Experiment';
+import ExperimentRoute from './routes/experiment/ExperimentRoute';
 
 import Prueba1 from './routes/pruebas/Prueba1';
 import Prueba2 from './routes/pruebas/Prueba2';
@@ -18,7 +18,7 @@ function Routes() {
             <Route path="/about">
                 <About />
             </Route>
-            <Route path="/experiment">
+            <Route path="/experiments/:experimentId">
                 <ExperimentRoute />
             </Route>
             <Route path="/prueba1">
@@ -36,5 +36,3 @@ function Routes() {
 
 
 export default Routes;
-
-

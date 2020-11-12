@@ -18,8 +18,8 @@ code {
   flex-direction: column;
 }
 
-footer {
-  flex-grow: 1;
+.footer {
+  /* flex-grow: 1; */
   color: white;
   background-color: #3f51b5;
   padding-top: 1rem;
