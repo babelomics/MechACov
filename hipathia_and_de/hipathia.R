@@ -1,10 +1,18 @@
 library(hipathia)
 
-# input variables
-meta_data_file <- "example_data/metadata.tsv"
-expression_file <- "example_data/expression.tsv"
-normalize_by_length <- TRUE
-selected_pathways <- "hsa04668,hsa04662,hsa04630,hsa04621"
+# capture script arguments
+args <- commandArgs(trailingOnly = FALSE)
+
+# path to the meta data file
+meta_data_file <- args[grep("--meta_data_file",args)+1]
+# path to the matrix file
+expression_file <- args[grep("--expression_file",args)+1]
+# wether to normalize circuit activity values by length or not
+normalize_by_length <- as.logical(args[grep("--normalize_by_length",args)+1])
+# wether to use a subset of the pathways included in hipathia. It should be a comma sepparated list of path IDs
+selected_pathways <- args[grep("--selected_pathways",args)+1]
+# output matrix file name
+out_file <- args[grep("--out_file",args)+1]
 
 # read tables
 meta_data <- read.table(file = meta_data_file, sep = "\t", header = TRUE)
@@ -65,6 +73,6 @@ path_to_name <- data.frame(path_id = rownames(path_vals_matrix))
 path_to_name$name <- hipathia::get_path_names(metaginfo = hipathia_pathways, names = path_to_name$path_id)
 
 # write intermediate outputs
-write.table(x = path_vals_matrix, file = "path_vals.tsv", sep = "\t", quote = FALSE)
+write.table(x = path_vals_matrix, file = out_file, sep = "\t", quote = FALSE)
 write.table(x = path_to_name, file = "path_to_name.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
