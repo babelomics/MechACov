@@ -33,7 +33,7 @@ export type BarStackHorizontalProps = {
 const purple1 = '#6c5efb';
 const purple2 = '#c998ff';
 export const purple3 = '#a44afe';
-export const background = '#eaedff';
+export const background = '#3f51b500';
 const defaultMargin = { top: 40, left: 50, right: 40, bottom: 100 };
 const tooltipStyles = {
     ...defaultStyles,
