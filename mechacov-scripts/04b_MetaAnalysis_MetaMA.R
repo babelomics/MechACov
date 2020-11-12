@@ -11,7 +11,6 @@
 #####################
 INFECTED_GROUP = "infected"
 CONTROL_GROUP = "mock"
-NO_SIG_RESULTS_STATUS = 99
 
 
 ################
@@ -25,7 +24,7 @@ argp = add_argument(argp, "--input", help="RDS experiment design.")
 argp = add_argument(argp, "--output", help="Combined list of differentially expressed genes/circuits.")
 argv = parse_args(argp)
 
-#argv$input <- "../hipathia_and_de/splitted_path_vals.rds"
+#argv$input <- "remote/mnt/lustre/scratch/home/dlopez/projects/biohackaton2020/src/MechACov/mechacov-scripts/splitted_path_vals.rds"
 #argv$output <- "example_metaMA_results.tsv"
 
 #######################
@@ -77,7 +76,7 @@ adjpval=p.adjust(rawpval, method = "BH")
 # output results
 if (length(res$Meta)>0){
   results.df <- data.frame (
-    id = ids,
+    id = ids[res$Meta],
     effect = res$TestStatistic[res$Meta],
     rawPval = rawpval[res$Meta],
     adjPval = adjpval[res$Meta],
@@ -87,8 +86,9 @@ if (length(res$Meta)>0){
   write_tsv(results.df, file = argv$output)
   
 } else {
-  write("No significant results", stderr())
-  quit(status = NO_SIG_RESULTS_STATUS)
+  msg = "No significant results"
+  write(msg, stderr())
+  stop(msg)
 }
 
 
