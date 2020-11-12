@@ -60,7 +60,7 @@ public class SampleController {
             @RequestParam(name = "studyId", required = false) List<String> studyIds,
             @RequestParam(name = "group", required = false) List<String> groups,
             @RequestParam(name = "strain", required = false) List<String> strains,
-            @RequestParam(name = "tissueCellType", required = false) List<String> tissueCellTypes,
+            @RequestParam(name = "tissueCellLine", required = false) List<String> tissueCellLines,
             @RequestParam(name = "platform", required = false) List<String> platforms,
             @RequestParam(name = "platformDetails", required = false) List<String> platformDetails,
             @RequestParam(name = "minHpi", required = false) Integer minHpi,
@@ -68,7 +68,7 @@ public class SampleController {
             @RequestParam(name = "minMoi", required = false) Integer minMoi,
             @RequestParam(name = "maxMoi", required = false) Integer maxMoi
     ) {
-        var filter = buildSampleFilter((studyIds, groups, strains, tissueCellTypes, platforms, platformDetails, minHpi, maxHpi, minMoi, maxMoi);
+        var filter = buildSampleFilter(studyIds, groups, strains, tissueCellLines, platforms, platformDetails, minHpi, maxHpi, minMoi, maxMoi);
         return sampleRepository.countFilter(filter);
     }
 
@@ -79,7 +79,7 @@ public class SampleController {
             @RequestParam(name = "studyId", required = false) List<String> studyIds,
             @RequestParam(name = "group", required = false) List<String> groups,
             @RequestParam(name = "strain", required = false) List<String> strains,
-            @RequestParam(name = "tissueCellType", required = false) List<String> tissueCellTypes,
+            @RequestParam(name = "tissueCellLine", required = false) List<String> tissueCellLines,
             @RequestParam(name = "platform", required = false) List<String> platforms,
             @RequestParam(name = "platformDetails", required = false) List<String> platformDetails,
             @RequestParam(name = "minHpi", required = false) Integer minHpi,
@@ -87,7 +87,7 @@ public class SampleController {
             @RequestParam(name = "minMoi", required = false) Integer minMoi,
             @RequestParam(name = "maxMoi", required = false) Integer maxMoi
     ) {
-        var filter = buildSampleFilter((studyIds, groups, strains, tissueCellTypes, platforms, platformDetails, minHpi, maxHpi, minMoi, maxMoi);
+        var filter = buildSampleFilter(studyIds, groups, strains, tissueCellLines, platforms, platformDetails, minHpi, maxHpi, minMoi, maxMoi);
         return sampleRepository.findByFilter(filter, PageRequest.of(page, pageSize));
     }
 
@@ -95,7 +95,7 @@ public class SampleController {
             List<String> studyIds,
             List<String> groups,
             List<String> strains,
-            List<String> tissueCellTypes,
+            List<String> tissueCellLines,
             List<String> platforms,
             List<String> platformDetails,
             Integer minHpi,
@@ -114,8 +114,8 @@ public class SampleController {
         if (CollectionUtils.isNotEmpty(strains)) {
             filter.getStrains().addAll(strains);
         }
-        if (CollectionUtils.isNotEmpty(tissueCellTypes)) {
-            filter.getTissueCellTypes().addAll(tissueCellTypes);
+        if (CollectionUtils.isNotEmpty(tissueCellLines)) {
+            filter.getTissueCellLines().addAll(tissueCellLines);
         }
         if (CollectionUtils.isNotEmpty(platforms)) {
             filter.getPlatforms().addAll(platforms);

@@ -3,7 +3,10 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Home from './routes/home/Home';
 import About from './routes/about/About';
-import Experiment from './routes/experiment/Experiment';
+import ExperimentRoute from './routes/experiment/Experiment';
+
+import Prueba1 from './routes/pruebas/Prueba1';
+import Prueba2 from './routes/pruebas/Prueba2';
 
 
 function Routes() {
@@ -12,11 +15,17 @@ function Routes() {
             <Route path="/home">
                 <Home />
             </Route>
-            <Route path="/about">ç
+            <Route path="/about">
                 <About />
             </Route>
             <Route path="/experiment">
-                <Experiment />
+                <ExperimentRoute />
+            </Route>
+            <Route path="/prueba1">
+                <Prueba1 />
+            </Route>
+            <Route path="/prueba2">
+                <Prueba2 />
             </Route>
             <Route path="/" exact>
                 <Redirect to="/home" />

@@ -1,5 +1,6 @@
 package org.cbra.megacov.controllers;
 
+
 import org.cbra.megacov.repositories.SampleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,13 +13,14 @@ import java.util.Collection;
 
 @CrossOrigin(origins = "*", methods = {RequestMethod.OPTIONS, RequestMethod.GET, RequestMethod.PUT, RequestMethod.POST})
 @RestController
-public class TissueCellTypeController {
+public class StudyController {
 
     @Autowired
     private SampleRepository sampleRepository;
 
-    @GetMapping("/tissueCellLines")
-    public Collection<String> getAllSampleTissueCellLines() throws IOException {
-        return sampleRepository.findAllTissueCellLines();
+    @GetMapping("/studies")
+    public Collection<String> getAllSampleStudies() throws IOException {
+        return sampleRepository.findAllStudies();
     }
+
 }
