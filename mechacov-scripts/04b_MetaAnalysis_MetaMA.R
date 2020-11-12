@@ -2,11 +2,21 @@
 # input: Genes/circuits differentially expressed file (from 02_GeneCircuitExpression2DifferentialExpression.R)
 # output: Meta-analysis of genes/circuits differentially expressed
 # output format: id, displayName, Effect/pvalue, [confidentInterval]
+# install
+### conda create -n mechacov -c conda-forge -c bioconda r-tidyverse r-argparser bioconductor-limma
+### Rscript -e "install.packages("metaMA")"
 
-#install.packages("tidyverse")
-#install.packages("metaMA")
+#####################
+###   CONSTANTS   ###
+#####################
+INFECTED_GROUP = "infected"
+CONTROL_GROUP = "mock"
+NO_SIG_RESULTS_STATUS = 99
 
 
+################
+###   INIT   ###
+################
 library(metaMA)
 library(tidyverse)
 library(argparser)
@@ -15,6 +25,8 @@ argp = add_argument(argp, "--input", help="RDS experiment design.")
 argp = add_argument(argp, "--output", help="Combined list of differentially expressed genes/circuits.")
 argv = parse_args(argp)
 
+#argv$input <- "../hipathia_and_de/splitted_path_vals.rds"
+#argv$output <- "example_metaMA_results.tsv"
 
 #######################
 ###  safety checks  ###
@@ -40,9 +52,9 @@ if (is.na(argv$input) || is.null(argv$input) || !file.exists(argv$input)) {
 ###############
 
 # load input file
-# studyId, id, displayName, logFC, pvalues
 experiment <- readRDS(file = argv$input)
 
+# keep only genes or circuits without NAs
 n <- c(1:length(experiment))
 esets <- list()
 classes <- list()
@@ -52,20 +64,32 @@ for (e in n){
   m <- experiment[[e]]$matrix_data
   esets[[e]] <- m[rownames(m) %in% ids,]
   classes[[e]] <- experiment[[e]]$group
+  classes[[e]][classes[[e]]==CONTROL_GROUP] <- 0
+  classes[[e]][classes[[e]]==INFECTED_GROUP] <- 1
 }
+
 
 # performs MetaMA analysis
 res=EScombination(esets=esets,classes=classes)
 rawpval=2*(1-pnorm(abs(res$TestStatistic)))
 adjpval=p.adjust(rawpval, method = "BH")
 
-results.df <- data.frame (
-  id = experiment$geneNames[res$Meta],
-  effect = res$TestStatistic[res$Meta],
-  pval = adjpval[res$Meta]
-)
-
-write_tsv(results.df, file = argv$output)
+# output results
+if (length(res$Meta)>0){
+  results.df <- data.frame (
+    id = ids,
+    effect = res$TestStatistic[res$Meta],
+    rawPval = rawpval[res$Meta],
+    adjPval = adjpval[res$Meta],
+    logAdjPval = -log(adjpval[res$Meta])
+  )
+  
+  write_tsv(results.df, file = argv$output)
+  
+} else {
+  write("No significant results", stderr())
+  quit(status = NO_SIG_RESULTS_STATUS)
+}
 
 
 
