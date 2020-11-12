@@ -45,8 +45,6 @@ de_list <- lapply(names(splitted_data), function(study_id) {
   res_df <- cbind("study_id" = study_id, res_df)
   return(res_df)
   
-  return(limma_result_list)
-  
 })
 
 # prepare output tables
