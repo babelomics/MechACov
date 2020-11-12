@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/HomeTwoTone';
 import ExploreIcon from '@material-ui/icons/BarChartTwoTone';
 import AboutIcon from '@material-ui/icons/InfoTwoTone';
-import PieChartIcon  from '@material-ui/icons/PieChartTwoTone';
+import PieChartIcon from '@material-ui/icons/PieChartTwoTone';
 
 
 const useStyles = makeStyles(theme => ({

@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Tab, makeStyles, Theme, AppBar, Tabs, Grid, Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@material-ui/core';
 import HistogramBar from '../visualizations/HistogramBar';
 import PieChart from '../visualizations/PieChart';
+import HeatmapPlotly from '../visualizations/HeatmapPlotly';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -69,9 +70,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
 }));
 
-function createData(name: string, calories: number, fat: number, carbs: number, protein: number) {
-    return { name, calories, fat, carbs, protein };
+function createData(name: string, platform: number, cases: number, controls: number, infected: number) {
+    return { name, platform, cases, controls, infected };
 }
+
 
 const rows = [
     createData('META-ANALYSIS', 159, 6.0, 24, 40),
@@ -80,6 +82,14 @@ const rows = [
     createData('STUDY C', 305, 37, 67, 43),
     createData('STUDY D', 356, 160, 49, 39),
 ];
+
+// function createDataGen(gen: string, logFC: number, PValue: string, adjPVal: number, logFC1: number) {
+//     return { gen, logFC, PValue, adjPVal, logFC1 };
+// }
+
+// const resultGenExpression = [
+//     createDataGen('TXNIP',	4.10977981,	3.71E-09,	4.06E-05,	2.382291661,	0.109048446,	0.268248035,	3.4001,	1.15E-09,	1.69E-08),
+// ];
 
 
 
@@ -106,7 +116,9 @@ export default function Prueba2() {
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-                <Grid container spacing={3}>
+                <Grid container
+                    justify="space-evenly"
+                    alignItems="center">
 
                     <Grid item xs={4}>
                         <PieChart width={600} height={300}></PieChart>
@@ -115,7 +127,7 @@ export default function Prueba2() {
                         <Paper className={classes.paper}>
                             <Typography variant="h6" >
                                 Variables from meta-data
-</Typography>
+                            </Typography>
                             <br />
                             <TableContainer component={Paper}>
                                 <Table className={classes.table} size="small" aria-label="a dense table">
@@ -134,10 +146,10 @@ export default function Prueba2() {
                                                 <TableCell component="th" scope="row">
                                                     {row.name}
                                                 </TableCell>
-                                                <TableCell align="right">{row.calories}</TableCell>
-                                                <TableCell align="right">{row.fat}</TableCell>
-                                                <TableCell align="right">{row.carbs}</TableCell>
-                                                <TableCell align="right">{row.protein}</TableCell>
+                                                <TableCell align="right">{row.platform}</TableCell>
+                                                <TableCell align="right">{row.cases}</TableCell>
+                                                <TableCell align="right">{row.controls}</TableCell>
+                                                <TableCell align="right">{row.infected}</TableCell>
                                             </TableRow>
                                         ))}
                                     </TableBody>
@@ -158,7 +170,109 @@ export default function Prueba2() {
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={1}>
+                <Grid container
+                    justify="space-evenly"
+                    alignItems="center"
+                    spacing={3}>
 
+                    <Grid item xs={12}>
+                        <HeatmapPlotly></HeatmapPlotly>
+                    </Grid>
+                    <Grid item xs={8}>
+
+                        <TableContainer component={Paper}>
+                            <Table className={classes.table} size="small" aria-label="a dense table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>study_id</TableCell>
+                                        <TableCell align="right">GSE122876</TableCell>
+                                        <TableCell align="right"></TableCell>
+                                        <TableCell align="right"></TableCell>
+                                        <TableCell align="right">GSE139516</TableCell>
+                                        <TableCell align="right"></TableCell>
+                                        <TableCell align="right"></TableCell>
+                                        <TableCell align="right">Meta-analysis</TableCell>
+                                        <TableCell align="right"></TableCell>
+                                        <TableCell align="right"></TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow>
+                                        <TableCell>feature_id</TableCell>
+                                        <TableCell align="right">logFC</TableCell>
+                                        <TableCell align="right">P-Value</TableCell>
+                                        <TableCell align="right">adj-P-Val</TableCell>
+                                        <TableCell align="right">logFC</TableCell>
+                                        <TableCell align="right">P-Value</TableCell>
+                                        <TableCell align="right">adj-P-Val</TableCell>
+                                        <TableCell align="right">eff Size</TableCell>
+                                        <TableCell align="right">P-Value</TableCell>
+                                        <TableCell align="right">adj-P-Val</TableCell>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TableCell>TXNIP</TableCell>
+                                        <TableCell align="right">4.10977981</TableCell>
+                                        <TableCell align="right">0.00000000371</TableCell>
+                                        <TableCell align="right">0.0000406</TableCell>
+                                        <TableCell align="right">2.382291661</TableCell>
+                                        <TableCell align="right">0.109048446</TableCell>
+                                        <TableCell align="right">0.268248035</TableCell>
+                                        <TableCell align="right">3.4001</TableCell>
+                                        <TableCell align="right">0.00000000115</TableCell>
+                                        <TableCell align="right">0.0000000169</TableCell>
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <TableCell>SPCS1</TableCell>
+                                        <TableCell align="right">-1.620408488</TableCell>
+                                        <TableCell align="right">0.00000000601</TableCell>
+                                        <TableCell align="right">0.0000406</TableCell>
+                                        <TableCell align="right">-1.869170556</TableCell>
+                                        <TableCell align="right">0.028301224</TableCell>
+                                        <TableCell align="right">0.113116804</TableCell>
+                                        <TableCell align="right">-1.2645</TableCell>
+                                        <TableCell align="right">0.00000117</TableCell>
+                                        <TableCell align="right">0.0000971</TableCell>
+                                    </TableRow>
+
+
+                                    <TableRow>
+                                        <TableCell>GMEB2</TableCell>
+                                        <TableCell align="right">1.576110798</TableCell>
+                                        <TableCell align="right">0.00000000632</TableCell>
+                                        <TableCell align="right">0.0000406</TableCell>
+                                        <TableCell align="right">0.489329602</TableCell>
+                                        <TableCell align="right">0.109048446</TableCell>
+                                        <TableCell align="right">0.268248035</TableCell>
+                                        <TableCell align="right">3.4001</TableCell>
+                                        <TableCell align="right">0.00000132</TableCell>
+                                        <TableCell align="right">0.000103506</TableCell>
+                                    </TableRow>
+
+
+                                    {/* {rows.map((row) => (
+                                        <TableRow key={row.name}>
+                                            <TableCell component="th" scope="row">
+                                                {row.name}
+                                            </TableCell>
+                                            <TableCell align="right">{row.platform}</TableCell>
+                                            <TableCell align="right">{row.cases}</TableCell>
+                                            <TableCell align="right">{row.controls}</TableCell>
+                                            <TableCell align="right"></TableCell>
+                                            <TableCell align="right"></TableCell>
+                                            <TableCell align="right">{row.infected}</TableCell>
+                                            <TableCell align="right"></TableCell>
+                                            <TableCell align="right"></TableCell>
+                                        </TableRow>
+                                    ))} */}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+
+                    </Grid>
+
+                </Grid>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Page Three
