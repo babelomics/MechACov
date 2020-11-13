@@ -72,23 +72,16 @@ rawpval=2*(1-pnorm(abs(res$TestStatistic)))
 adjpval=p.adjust(rawpval, method = "BH")
 logAdjPval=-log(adjpval)
 
-# create results dataframe
-if (length(res$Meta)>0){
-  results.df <- data.frame (
-    id = ids[res$Meta],
-    effect = res$TestStatistic[res$Meta],
-    rawPval = rawpval[res$Meta],
-    adjPval = adjpval[res$Meta],
-    logAdjPval = logAdjPval[res$Meta]
-  )
+results.df <- data.frame (
+  id = ids,
+  effect = res$TestStatistic,
+  rawPval = rawpval,
+  adjPval = adjpval,
+  logAdjPval = logAdjPval
+)
   
-  write_tsv(results.df, file = argv$output)
+write_tsv(results.df, file = argv$output)
   
-} else {
-  msg = "No significant results"
-  write(msg, stderr())
-  stop(msg)
-}
 
 
 
