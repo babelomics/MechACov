@@ -1,7 +1,6 @@
 #!/usr/bin/env Rscript
 # input: Genes/circuits differentially expressed file (from 02_GeneCircuitExpression2DifferentialExpression.R)
 # output: Meta-analysis of genes/circuits differentially expressed
-# output format: id, displayName, Effect/pvalue, [confidentInterval]
 # install
 ### conda create -n mechacov -c conda-forge -c bioconda r-tidyverse r-argparser bioconductor-limma
 ### Rscript -e "install.packages("metaMA")"
@@ -24,8 +23,7 @@ argp = add_argument(argp, "--input", help="RDS experiment design.")
 argp = add_argument(argp, "--output", help="Combined list of differentially expressed genes/circuits.")
 argv = parse_args(argp)
 
-#argv$input <- "remote/mnt/lustre/scratch/home/dlopez/projects/biohackaton2020/src/MechACov/mechacov-scripts/splitted_path_vals.rds"
-#argv$output <- "example_metaMA_results.tsv"
+
 
 #######################
 ###  safety checks  ###
@@ -72,15 +70,16 @@ for (e in n){
 res=EScombination(esets=esets,classes=classes)
 rawpval=2*(1-pnorm(abs(res$TestStatistic)))
 adjpval=p.adjust(rawpval, method = "BH")
+logAdjPval=-log(adjpval)
 
-# output results
+# create results dataframe
 if (length(res$Meta)>0){
   results.df <- data.frame (
     id = ids[res$Meta],
     effect = res$TestStatistic[res$Meta],
     rawPval = rawpval[res$Meta],
     adjPval = adjpval[res$Meta],
-    logAdjPval = -log(adjpval[res$Meta])
+    logAdjPval = logAdjPval[res$Meta]
   )
   
   write_tsv(results.df, file = argv$output)
