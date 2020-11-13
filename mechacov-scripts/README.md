@@ -50,4 +50,31 @@ Example with signaling circuit data
 ```
 Rscript 03a_StudyAnalysis_limma.R --splitted_data_file "splitted_path_vals.rds" --numerator_value "infected" --denominator_value "mock" --out_file "limma_path_vals.tsv"
 ```
+# Meta analysis
+This section contains scripts to perform different meta-analises from the previously generated pre-processed data.
+
+## MetaMA
+The `03b_MetaAnalysis_MetaMA.R` script uses the RDS object generated in the `Split studies` section to generate a diffential expression meta-analysis table.
+
+Example with MetaMA meta-analysis
+
+```
+Rscript 03b_MetaAnalysis_MetaMA.R --input "example_data/splitted_path_vals.rds" --output "example_metaMA_results.tsv"
+```
+
+## BMRS
+
+TO BE DONE
+
+## MetaDE
+
+TO BE DONE 
+
+
+# Format results
+
+
+
+
+
 
