@@ -72,8 +72,6 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
                         <TableCell>Tissue cell type</TableCell>
                         <TableCell>Platform</TableCell>
                         <TableCell>Platform details</TableCell>
-                        <TableCell>Control</TableCell>
-                        <TableCell>Case</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -82,8 +80,8 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
                             samples.map((sample: Sample) => {
                                 const isCase = cases.has(sample.id);
                                 const isControl = !isCase && controls.has(sample.id);
-                                return (
-                                    <SampleRow key={sample.id} sample={sample} isControl={isControl} isCase={isCase} toggleControl={toggleControl} toggleCase={toggleCase} />
+                                return (                                    
+                                    <SampleRow key={sample.id} sample={sample} />
                                 );
                             })
                         }
@@ -98,18 +96,8 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
     }
 
     private readonly fetchPage = (page: number, pageSize: number, abortSignal: AbortSignal): Promise<Sample[]> => {
-
         const { searchFilter } = this.props;
-        const queryParams = [];
-        for (const studyId of (searchFilter.studyIds || [])) {
-            queryParams.push(`studyId=${studyId}`);
-        }
-        for (const cellLine of (searchFilter.tissueCellLines || [])) {
-            queryParams.push(`tissueCellLine=${cellLine}`);
-        }
-        const queryParamStr = 0 === queryParams.length ? "" : `?${queryParams.join("&")}`;
-        const url = `samplePages/${pageSize}/${page}${queryParamStr}`;
-        return MechACovClient.get<Sample[]>(url, {}, abortSignal);
+        return MechACovClient.getSamplePage(searchFilter, pageSize, page, abortSignal);
     }
 }
 

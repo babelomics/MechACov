@@ -8,7 +8,7 @@ const hot1 = '#77312f';
 const hot2 = '#f33d15';
 const cool1 = '#122549';
 const cool2 = '#b4fbde';
-export const background = '#28272c';
+export const background = '#3f51b500';
 
 const binData = genBins(/* length = */ 16, /* height = */ 16);
 

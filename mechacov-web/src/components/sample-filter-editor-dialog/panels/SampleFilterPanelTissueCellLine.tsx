@@ -86,7 +86,7 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
         try {
             this.abortController = new AbortController();
             this.setState({ tissueCellLines: [], loading: true, error: false });
-            const tissueCellLines = await MechACovClient.get<string[]>("tissueCellLines", undefined, this.abortController.signal);
+            const tissueCellLines = await MechACovClient.getTissueCellLines(this.abortController.signal);
             this.setState({ loading: false, tissueCellLines: tissueCellLines });
         } catch (error) {
             if ("AbortError" !== error.name) {

@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/HomeTwoTone';
 import ExploreIcon from '@material-ui/icons/BarChartTwoTone';
 import AboutIcon from '@material-ui/icons/InfoTwoTone';
+import PieChartIcon from '@material-ui/icons/PieChartTwoTone';
 
 
 const useStyles = makeStyles(theme => ({
@@ -97,8 +98,8 @@ export default function Sliderbar() {
 
                 <Link to="/prueba2" className={classes.link}>
                     <ListItem button >
-                        <ListItemIcon><ExploreIcon /></ListItemIcon>
-                        <ListItemText>data-ui test</ListItemText>
+                        <ListItemIcon><PieChartIcon /></ListItemIcon>
+                        <ListItemText>prueba2</ListItemText>
                     </ListItem>
                 </Link>
 
