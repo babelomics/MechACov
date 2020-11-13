@@ -29,6 +29,7 @@
     "@visx/tooltip": "^1.1.0",
     "abort-controller": "^3.0.0",
     "install": "^0.13.0",
+    "plotly.js": "^1.57.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.2",
@@ -66,5 +67,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/plotly.js": "^1.54.2"
   }
 }
