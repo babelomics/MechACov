@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PlotlyChart from 'react-plotlyjs-ts';
+// import PlotlyChart from 'react-plotlyjs-ts';
 
 class HeatmapPlotly extends React.Component {
 
@@ -28,10 +28,12 @@ class HeatmapPlotly extends React.Component {
         //         title: 'time'
         //     },
         // };
+        // TODO: resolve npm conflicts
         return (
-            <PlotlyChart data={data}
-                // layout={layout}
-            />
+            <></>
+            // <PlotlyChart data={data}
+            //     // layout={layout}
+            // />
         );
     }
 }

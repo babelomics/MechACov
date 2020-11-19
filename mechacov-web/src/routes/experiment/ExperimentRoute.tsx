@@ -5,17 +5,21 @@ import Experiment from '../../models/Experiment';
 
 import ExperimentDefiner from './ExperimentDefiner';
 
+import { useSelector, useDispatch } from 'react-redux';
+import ExperimentActions from '../../actions/ExperimentActions';
+
 
 function Component() {
 
     const { experimentId } = useParams() as any;
-
-    const [experiment, setExperiment] = useState(undefined as (Experiment | undefined));
+    const experiment = useSelector((state: any) => state.experiment) as Experiment | null;
+    const dispatch = useDispatch();
+    
 
     useEffect(() => {
         const abortController = new AbortController();
         MechACovClient.getExperiment(experimentId, abortController.signal).then((experiment: Experiment) => {
-            setExperiment(experiment);
+            dispatch(ExperimentActions.set(experiment));
         }).catch((error: Error) => {
             if ("AbortError" !== error.name) {
                 // TODO
@@ -25,15 +29,15 @@ function Component() {
 
     }, [experimentId]);
 
-    if (undefined === experiment) {
+    if (null === experiment) {
         return (
             <div>Loading...</div>
         );
     } else {
-        const actualExperiment = experiment as unknown as Experiment;
+        const actualExperiment = experiment as Experiment;
         if ("IN_DEFINITION" === actualExperiment.state) {
             return (
-                <ExperimentDefiner experiment={actualExperiment} />
+                <ExperimentDefiner />
             );
         } else {
             return (

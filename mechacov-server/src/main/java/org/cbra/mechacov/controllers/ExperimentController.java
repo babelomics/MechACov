@@ -33,7 +33,7 @@ public class ExperimentController {
         }
     }
 
-    @GetMapping("/experiments/{{experimentId}/availableSamples/{pageSize}/{page}")
+    @GetMapping("/experiments/{experimentId}/availableSamples/{pageSize}/{page}")
     public List<Sample> getExperimentAvailableSamplesPage(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -42,7 +42,7 @@ public class ExperimentController {
         return List.of();
     }
 
-    @GetMapping("/experiments/{{experimentId}/controls/{pageSize}/{page}")
+    @GetMapping("/experiments/{experimentId}/controls/{pageSize}/{page}")
     public List<Sample> getExperimentControlsPage(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -51,7 +51,7 @@ public class ExperimentController {
         return List.of();
     }
 
-    @GetMapping("/experiments/{{experimentId}/cases/{pageSize}/{page}")
+    @GetMapping("/experiments/{experimentId}/cases/{pageSize}/{page}")
     public List<Sample> getExperimentCasesSamplePage(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -60,7 +60,7 @@ public class ExperimentController {
         return List.of();
     }
 
-    @PutMapping("/experiments/{{experimentId}/controls")
+    @PutMapping("/experiments/{experimentId}/controls")
     public void addExperimentControls(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -70,7 +70,7 @@ public class ExperimentController {
     ) {
     }
 
-    @PutMapping("/experiments/{{experimentId}/cases")
+    @PutMapping("/experiments/{experimentId}/cases")
     public void addExperimentCases(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -79,7 +79,7 @@ public class ExperimentController {
     ) {
     }
 
-    @DeleteMapping("/experiments/{{experimentId}/controls")
+    @DeleteMapping("/experiments/{experimentId}/controls")
     public void removeExperimentControls(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -88,7 +88,7 @@ public class ExperimentController {
     ) {
     }
 
-    @DeleteMapping("/experiments/{{experimentId}/cases")
+    @DeleteMapping("/experiments/{experimentId}/cases")
     public void removeExperimentCases(
             @PathVariable String experimentId,
             @PathVariable int pageSize,
@@ -96,8 +96,4 @@ public class ExperimentController {
             @RequestBody Map requestBody
     ) {
     }
-
-
-
-
 }

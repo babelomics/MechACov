@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Button, Divider, Tab, Tabs } from '@material-ui/core';
+import { connect } from 'react-redux';
+import { Box, Button, Divider, Grid, Tab, Tabs } from '@material-ui/core';
 
 import ExperimentCreator from './ExperimentCreator';
 import SelectionView from './SelectionView';
 import SampleList from './SampleList';
 import SampleListCounter from './SampleListCounter';
-import SampleFilterEditor from '../../components/sample-filter-editor/SampleFilterEditor';
+import SampleFilterEditor from '../../components/sample-filter-editor-2/SampleFilterEditor';
 import SampleFilter from '../../models/SampleFilter';
 import Sample from '../../models/Sample';
 import Experiment from '../../models/Experiment';
@@ -30,13 +31,13 @@ const defaultSampleFilter: SampleFilter = {
 
 
 interface ComponentProps {
-    experiment: Experiment;        
+    experiment: Experiment;
+    availableSampleCount: number;
 }
 
 
 interface ComponentState {
     activeTab: string;
-    sampleFilter: SampleFilter;
 }
 
 
@@ -44,28 +45,48 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
 
     state = {
         activeTab: "samples",
-        sampleFilter: {} as SampleFilter,
-        controlCount: 0,
-        caseCount: 0,
-    }
+    };
 
     render() {
-        const { experiment } = this.props;
-        const { activeTab, sampleFilter } = this.state;
+        const { experiment, availableSampleCount } = this.props;
+        const { activeTab } = this.state;
+
+        const availableSampleLabel = `Available Samples (${availableSampleCount})`;
 
         return (
             <div>
-                <ExperimentDetails experiment={experiment} />
-                <SampleFilterEditor sampleFilter={sampleFilter} setSampleFilter={this.setSampleFilter} />
-                <Tabs value={activeTab} onChange={this.handleTabChange}>
-                    <Tab value="samples" label="Samples" />
-                    <Tab value="controls" label="Controls" />
-                    <Tab value="cases" label="Cases" />
-                </Tabs>
-                <Divider />
-                { "samples" === activeTab && <AvailableSamples experimentId={experiment.experimentId} sampleFilter={sampleFilter} />}
-                { "controls" === activeTab && <div />}
-                { "cases" === activeTab && <div />}
+                {/* <ExperimentDetails experiment={experiment} /> */}
+                <Box margin={4}>
+                    <Grid container>
+                        <Grid item xs={12}>
+                            <Box width="100%" display="flex">
+                                <Box flexGrow={1} />
+                                <Box flexGrow={0}>
+                                    <Button disabled variant="contained" color="primary">Run experiment!</Button>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} sm={3}>
+                            <Box margin={2}>
+                                <SampleFilterEditor />
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} sm={9}>
+                            <Box margin={2}>
+
+                                <Tabs value={activeTab} onChange={this.handleTabChange}>
+                                    <Tab value="samples" label={availableSampleLabel} />
+                                    <Tab value="controls" label="Controls" />
+                                    <Tab value="cases" label="Cases" />
+                                </Tabs>
+                                <Divider />
+                                {"samples" === activeTab && <AvailableSamples />}
+                                {"controls" === activeTab && <div />}
+                                {"cases" === activeTab && <div />}
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
             </div>
         );
     }
@@ -73,12 +94,13 @@ class Component extends React.PureComponent<ComponentProps, ComponentState> {
     private readonly handleTabChange = (event: React.ChangeEvent<{}>, value: any) => {
         this.setState({ activeTab: value });
     }
-
-    private readonly setSampleFilter = (newSampleFilter: SampleFilter) => {
-        this.setState({ sampleFilter: newSampleFilter });
-    }
-
 }
 
 
-export default Component;
+const mapStateToProps = (state: any) => ({
+    experiment: state.experiment as Experiment,
+    availableSampleCount: (state.sampleCounts.availableCount | 0) as number,
+});
+
+
+export default connect(mapStateToProps)(Component);

@@ -1,16 +1,24 @@
-import { Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TablePagination, TableRow } from '@material-ui/core';
 import React from 'react';
+import { connect } from 'react-redux';
+import { Box, Button, ButtonGroup, Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TablePagination, TableRow } from '@material-ui/core';
+
 import MechACovClient from '../../clients/MechacovClient';
+import Experiment from '../../models/Experiment';
 import Sample from '../../models/Sample';
 
 import SampleFilter from '../../models/SampleFilter';
 import SampleRow from './SampleRow';
+import SampleCounterActionTypes from '../../action-types/SampleCounterActionTypes';
+import SampleCounterActions from '../../actions/SampleCounterActions';
 
 
 
 interface ComponentProps {
     sampleFilter: SampleFilter;
     experimentId: string;
+    sampleCount: number;
+    resetSampleCount: () => void;
+    setSampleCount: (count: number) => void;
 }
 
 
@@ -18,7 +26,6 @@ interface ComponentState {
     pageSize: number;
     page: number;
     samples: Sample[];
-    sampleCount: number;
 }
 
 
@@ -31,7 +38,6 @@ class AvailableSamples extends React.PureComponent<ComponentProps, ComponentStat
         pageSize: 10,
         page: 0,
         samples: [],
-        sampleCount: 0,
     };
 
     componentDidMount() {
@@ -53,13 +59,23 @@ class AvailableSamples extends React.PureComponent<ComponentProps, ComponentStat
     }
 
     render() {
-        const { samples, sampleCount, page, pageSize } = this.state;
+        const { samples, page, pageSize } = this.state;
+        const { sampleCount } = this.props;
 
         const pageSampleCount = samples.length;
         const numEmpties = pageSize - pageSampleCount;
 
         return (
             <Paper>
+                <Box margin={4} display="flex" flexDirection="row-reverse">
+                    <ButtonGroup color="default" variant="contained">
+                        <Button variant="contained">Add all to controls</Button>
+                        <Button variant="contained">Remove all from controls</Button>
+                        <Button variant="contained">Add all to cases</Button>
+                        <Button variant="contained">Remove all from cases</Button>
+
+                    </ButtonGroup>
+                </Box>
                 <TableContainer>
                     <Table>
                         <TableHead>
@@ -119,11 +135,11 @@ class AvailableSamples extends React.PureComponent<ComponentProps, ComponentStat
     }
 
     private readonly countSamples = () => {
-        const { sampleFilter } = this.props;
+        const { sampleFilter, setSampleCount } = this.props;
         this.abortControllerForCount.abort();
         this.abortControllerForCount = new AbortController();
         MechACovClient.countSamples(sampleFilter, this.abortControllerForCount.signal).then((sampleCount: number) => {
-            this.setState({ sampleCount: sampleCount });
+            setSampleCount(sampleCount);
         }).catch((error: Error) => {
             if ("AbortError" !== error.name) {
 
@@ -133,5 +149,17 @@ class AvailableSamples extends React.PureComponent<ComponentProps, ComponentStat
 }
 
 
+const mapStateToProps = (state: any) => ({
+    experimentId: (state.experiment as Experiment).experimentId,
+    sampleFilter: state.sampleFilter as SampleFilter,
+    sampleCount: (state.sampleCounts.availableCount | 0) as number,
+});
 
-export default AvailableSamples;
+const mapDispatchToProps = (dispatch: any) => ({
+    resetSampleCount: () => { dispatch(SampleCounterActions.resetAvailable()); },
+    setSampleCount: (count: number) => { dispatch(SampleCounterActions.setAvailable(count)); },
+});
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AvailableSamples);

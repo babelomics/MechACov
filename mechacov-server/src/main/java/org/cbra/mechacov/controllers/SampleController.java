@@ -56,7 +56,7 @@ public class SampleController {
     }
 
     @GetMapping("/samples/count")
-    public Long getSamples(
+    public Long countSamples(
             @RequestParam(name = "studyId", required = false) List<String> studyIds,
             @RequestParam(name = "group", required = false) List<String> groups,
             @RequestParam(name = "strain", required = false) List<String> strains,
