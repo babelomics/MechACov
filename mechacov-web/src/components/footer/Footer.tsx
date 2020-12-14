@@ -20,14 +20,13 @@ function Footer() {
         <Box position="fixed" marginBottom={0} paddingBottom={0} className="footer" width="100%" padding={2}>
             <Box display="flex" flexDirection="row">
                 <Box flexGrow={1} />
-                <strong>MechACov</strong>&nbsp;&nbsp;                
+                <strong>MechACov</strong>&nbsp;&nbsp;
                 <Copyright />
                 <Box flexGrow={1} />
             </Box>
         </Box>
     );
 }
-
 
 
 export default Footer;

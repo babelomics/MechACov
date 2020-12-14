@@ -8,8 +8,6 @@ import Footer from './components/footer/Footer';
 
 //Routes
 import Routes from './Routes';
-import { Box } from '@material-ui/core';
-
 import appStore from './appStore';
 
 
