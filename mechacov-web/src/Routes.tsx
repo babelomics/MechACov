@@ -2,11 +2,11 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Home from './routes/home/Home';
-import About from './routes/about/About';
 import ExperimentRoute from './routes/experiment/ExperimentRoute';
 
 import Prueba1 from './routes/pruebas/Prueba1';
 import Prueba2 from './routes/pruebas/Prueba2';
+import Prueba3 from './routes/pruebas/Prueba3';
 
 
 function Routes() {
@@ -14,9 +14,6 @@ function Routes() {
         <Switch>
             <Route path="/home">
                 <Home />
-            </Route>
-            <Route path="/about">
-                <About />
             </Route>
             <Route path="/experiments/:experimentId">
                 <ExperimentRoute />
@@ -26,6 +23,9 @@ function Routes() {
             </Route>
             <Route path="/prueba2">
                 <Prueba2 />
+            </Route>
+            <Route path="/prueba3">
+                <Prueba3 />
             </Route>
             <Route path="/" exact>
                 <Redirect to="/home" />
