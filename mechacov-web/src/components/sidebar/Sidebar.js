@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom'
 
 import HomeIcon from '@material-ui/icons/HomeTwoTone';
 import ExploreIcon from '@material-ui/icons/BarChartTwoTone';
-import AboutIcon from '@material-ui/icons/InfoTwoTone';
 import PieChartIcon from '@material-ui/icons/PieChartTwoTone';
 
 
@@ -99,15 +98,13 @@ export default function Sliderbar() {
                 <Link to="/prueba2" className={classes.link}>
                     <ListItem button >
                         <ListItemIcon><PieChartIcon /></ListItemIcon>
-                        <ListItemText>prueba2</ListItemText>
+                        <ListItemText>visx</ListItemText>
                     </ListItem>
                 </Link>
-
-
-                <Link to="/about" className={classes.link}>
+                <Link to="/prueba3" className={classes.link}>
                     <ListItem button >
-                        <ListItemIcon><AboutIcon /></ListItemIcon>
-                        <ListItemText>About</ListItemText>
+                        <ListItemIcon><PieChartIcon /></ListItemIcon>
+                        <ListItemText>recharts</ListItemText>
                     </ListItem>
                 </Link>
             </List>

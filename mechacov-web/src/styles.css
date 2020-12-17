@@ -6,3 +6,6 @@ body,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 2em;
 }
+body {
+  background-color: #f1f3f5;
+}
